@@ -1,0 +1,187 @@
+﻿Build started 23/04/2012 12:08:06.
+     1>Project "C:\Users\Marcos\Desktop\Cronus Trunk - Rev 3338\Cronus Trunk - Rev 3338\vcproj-9\map-server_txt.vcxproj" on node 3 (build target(s)).
+     1>InitializeBuildStatus:
+         Creating "map-server_txt\Debug\map-server_txt.unsuccessfulbuild" because "AlwaysCreate" was specified.
+       ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /I..\3rdparty\zlib\include /I..\3rdparty\pcre\include /I..\3rdparty\msinttypes\include /I..\3rdparty\mt19937ar /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _WIN32 /D __WIN32 /D _DEBUG /D PCRE_SUPPORT /D TXT_ONLY /D _CRT_SECURE_NO_DEPRECATE /D _CRT_NONSTDC_NO_DEPRECATE /D FD_SETSIZE=4096 /D DB_MANUAL_CAST_TO_UNION /D _MBCS /Gm /RTC1 /MTd /GS /Gy /fp:precise /Zc:wchar_t /Zc:forScope /Fo"map-server_txt\Debug\\" /Fd"map-server_txt\Debug\vc100.pdb" /Gd /TC /wd4018 /wd4100 /wd4800 /analyze- /errorReport:prompt ..\src\map\atcommand.c ..\src\map\battle.c ..\src\map\battleground.c ..\src\map\buyingstore.c ..\src\map\chat.c ..\src\map\chrif.c ..\src\map\clif.c ..\src\map\date.c ..\src\map\duel.c ..\src\map\guild.c ..\src\map\homunculus.c ..\src\map\instance.c ..\src\map\intif.c ..\src\map\itemdb.c ..\src\map\log.c ..\src\map\mail.c ..\src\map\map.c ..\src\map\mapreg_txt.c ..\src\map\mercenary.c ..\src\map\mob.c ..\src\map\npc.c ..\src\map\npc_chat.c ..\src\map\party.c ..\src\map\path.c ..\src\map\pc.c ..\src\map\pet.c ..\src\map\quest.c ..\src\map\script.c ..\src\map\searchstore.c ..\src\map\skill.c ..\src\map\status.c ..\src\map\storage.c ..\src\map\trade.c ..\src\map\unit.c ..\src\map\vending.c ..\src\common\core.c ..\src\common\db.c ..\src\common\ers.c ..\src\common\grfio.c ..\src\common\lock.c ..\src\common\malloc.c ..\src\common\md5calc.c ..\src\common\mapindex.c ..\src\common\nullpo.c ..\src\common\plugins.c ..\src\common\random.c ..\src\common\showmsg.c ..\src\common\socket.c ..\src\common\strlib.c ..\src\common\timer.c ..\src\common\utils.c ..\3rdparty\mt19937ar\mt19937ar.c
+         mt19937ar.c
+         utils.c
+         timer.c
+         strlib.c
+         socket.c
+         showmsg.c
+         random.c
+         plugins.c
+         nullpo.c
+         mapindex.c
+         md5calc.c
+         malloc.c
+         lock.c
+         grfio.c
+         ers.c
+         db.c
+         core.c
+         vending.c
+         unit.c
+         trade.c
+         Generating Code...
+         Compiling...
+         storage.c
+         status.c
+         skill.c
+         searchstore.c
+         script.c
+         quest.c
+         pet.c
+         pc.c
+         path.c
+         party.c
+         npc_chat.c
+         npc.c
+         mob.c
+         mercenary.c
+         mapreg_txt.c
+         map.c
+         mail.c
+         log.c
+         itemdb.c
+         intif.c
+         Generating Code...
+         Compiling...
+         instance.c
+         homunculus.c
+         guild.c
+         duel.c
+         date.c
+         clif.c
+         chrif.c
+         chat.c
+         buyingstore.c
+         battleground.c
+         battle.c
+         atcommand.c
+         Generating Code...
+       ManifestResourceCompile:
+         C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\rc.exe /nologo /fo"map-server_txt\Debug\map-server_txt.exe.embed.manifest.res" map-server_txt\Debug\map-server_txt_manifest.rc 
+     1>C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\Microsoft.CppBuild.targets(990,5): warning MSB8012: TargetPath(C:\Users\Marcos\Desktop\Cronus Trunk - Rev 3338\Cronus Trunk - Rev 3338\vcproj-9\..\map-server_txt.exe) does not match the Linker's OutputFile property value (C:\Users\Marcos\Desktop\Cronus Trunk - Rev 3338\Cronus Trunk - Rev 3338\map-server.exe). This may cause your project to build incorrectly. To correct this, please make sure that $(OutDir), $(TargetName) and $(TargetExt) property values match the value specified in %(Link.OutputFile).
+     1>C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\Microsoft.CppBuild.targets(992,5): warning MSB8012: TargetName(map-server_txt) does not match the Linker's OutputFile property value (map-server). This may cause your project to build incorrectly. To correct this, please make sure that $(OutDir), $(TargetName) and $(TargetExt) property values match the value specified in %(Link.OutputFile).
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"..\map-server.exe" /INCREMENTAL /NOLOGO /LIBPATH:..\3rdparty\zlib\lib /LIBPATH:..\3rdparty\pcre\lib libcmtd.lib oldnames.lib ws2_32.lib zdll.lib pcre.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /NODEFAULTLIB /MANIFEST /ManifestFile:"map-server_txt\Debug\map-server_txt.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"..\map-server.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE:NO /IMPLIB:"..\map-server_txt.lib" /MACHINE:X86 "map-server_txt\Debug\map-server_txt.exe.embed.manifest.res"
+         "map-server_txt\Debug\atcommand.obj"
+         "map-server_txt\Debug\battle.obj"
+         "map-server_txt\Debug\battleground.obj"
+         "map-server_txt\Debug\buyingstore.obj"
+         "map-server_txt\Debug\chat.obj"
+         "map-server_txt\Debug\chrif.obj"
+         "map-server_txt\Debug\clif.obj"
+         "map-server_txt\Debug\date.obj"
+         "map-server_txt\Debug\duel.obj"
+         "map-server_txt\Debug\guild.obj"
+         "map-server_txt\Debug\homunculus.obj"
+         "map-server_txt\Debug\instance.obj"
+         "map-server_txt\Debug\intif.obj"
+         "map-server_txt\Debug\itemdb.obj"
+         "map-server_txt\Debug\log.obj"
+         "map-server_txt\Debug\mail.obj"
+         "map-server_txt\Debug\map.obj"
+         "map-server_txt\Debug\mapreg_txt.obj"
+         "map-server_txt\Debug\mercenary.obj"
+         "map-server_txt\Debug\mob.obj"
+         "map-server_txt\Debug\npc.obj"
+         "map-server_txt\Debug\npc_chat.obj"
+         "map-server_txt\Debug\party.obj"
+         "map-server_txt\Debug\path.obj"
+         "map-server_txt\Debug\pc.obj"
+         "map-server_txt\Debug\pet.obj"
+         "map-server_txt\Debug\quest.obj"
+         "map-server_txt\Debug\script.obj"
+         "map-server_txt\Debug\searchstore.obj"
+         "map-server_txt\Debug\skill.obj"
+         "map-server_txt\Debug\status.obj"
+         "map-server_txt\Debug\storage.obj"
+         "map-server_txt\Debug\trade.obj"
+         "map-server_txt\Debug\unit.obj"
+         "map-server_txt\Debug\vending.obj"
+         "map-server_txt\Debug\core.obj"
+         "map-server_txt\Debug\db.obj"
+         "map-server_txt\Debug\ers.obj"
+         "map-server_txt\Debug\grfio.obj"
+         "map-server_txt\Debug\lock.obj"
+         "map-server_txt\Debug\malloc.obj"
+         "map-server_txt\Debug\md5calc.obj"
+         "map-server_txt\Debug\mapindex.obj"
+         "map-server_txt\Debug\nullpo.obj"
+         "map-server_txt\Debug\plugins.obj"
+         "map-server_txt\Debug\random.obj"
+         "map-server_txt\Debug\showmsg.obj"
+         "map-server_txt\Debug\socket.obj"
+         "map-server_txt\Debug\strlib.obj"
+         "map-server_txt\Debug\timer.obj"
+         "map-server_txt\Debug\utils.obj"
+         "map-server_txt\Debug\mt19937ar.obj" /FIXED:NO 
+       Manifest:
+         C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\mt.exe /nologo /verbose /out:"map-server_txt\Debug\map-server_txt.exe.embed.manifest" /manifest "map-server_txt\Debug\map-server_txt.exe.intermediate.manifest"
+         C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\rc.exe /nologo /fo"map-server_txt\Debug\map-server_txt.exe.embed.manifest.res" map-server_txt\Debug\map-server_txt_manifest.rc 
+       LinkEmbedManifest:
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"..\map-server.exe" /INCREMENTAL /NOLOGO /LIBPATH:..\3rdparty\zlib\lib /LIBPATH:..\3rdparty\pcre\lib libcmtd.lib oldnames.lib ws2_32.lib zdll.lib pcre.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /NODEFAULTLIB /MANIFEST /ManifestFile:"map-server_txt\Debug\map-server_txt.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"..\map-server.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE:NO /IMPLIB:"..\map-server_txt.lib" /MACHINE:X86 "map-server_txt\Debug\map-server_txt.exe.embed.manifest.res"
+         "map-server_txt\Debug\atcommand.obj"
+         "map-server_txt\Debug\battle.obj"
+         "map-server_txt\Debug\battleground.obj"
+         "map-server_txt\Debug\buyingstore.obj"
+         "map-server_txt\Debug\chat.obj"
+         "map-server_txt\Debug\chrif.obj"
+         "map-server_txt\Debug\clif.obj"
+         "map-server_txt\Debug\date.obj"
+         "map-server_txt\Debug\duel.obj"
+         "map-server_txt\Debug\guild.obj"
+         "map-server_txt\Debug\homunculus.obj"
+         "map-server_txt\Debug\instance.obj"
+         "map-server_txt\Debug\intif.obj"
+         "map-server_txt\Debug\itemdb.obj"
+         "map-server_txt\Debug\log.obj"
+         "map-server_txt\Debug\mail.obj"
+         "map-server_txt\Debug\map.obj"
+         "map-server_txt\Debug\mapreg_txt.obj"
+         "map-server_txt\Debug\mercenary.obj"
+         "map-server_txt\Debug\mob.obj"
+         "map-server_txt\Debug\npc.obj"
+         "map-server_txt\Debug\npc_chat.obj"
+         "map-server_txt\Debug\party.obj"
+         "map-server_txt\Debug\path.obj"
+         "map-server_txt\Debug\pc.obj"
+         "map-server_txt\Debug\pet.obj"
+         "map-server_txt\Debug\quest.obj"
+         "map-server_txt\Debug\script.obj"
+         "map-server_txt\Debug\searchstore.obj"
+         "map-server_txt\Debug\skill.obj"
+         "map-server_txt\Debug\status.obj"
+         "map-server_txt\Debug\storage.obj"
+         "map-server_txt\Debug\trade.obj"
+         "map-server_txt\Debug\unit.obj"
+         "map-server_txt\Debug\vending.obj"
+         "map-server_txt\Debug\core.obj"
+         "map-server_txt\Debug\db.obj"
+         "map-server_txt\Debug\ers.obj"
+         "map-server_txt\Debug\grfio.obj"
+         "map-server_txt\Debug\lock.obj"
+         "map-server_txt\Debug\malloc.obj"
+         "map-server_txt\Debug\md5calc.obj"
+         "map-server_txt\Debug\mapindex.obj"
+         "map-server_txt\Debug\nullpo.obj"
+         "map-server_txt\Debug\plugins.obj"
+         "map-server_txt\Debug\random.obj"
+         "map-server_txt\Debug\showmsg.obj"
+         "map-server_txt\Debug\socket.obj"
+         "map-server_txt\Debug\strlib.obj"
+         "map-server_txt\Debug\timer.obj"
+         "map-server_txt\Debug\utils.obj"
+         "map-server_txt\Debug\mt19937ar.obj" /FIXED:NO 
+         map-server_txt.vcxproj -> C:\Users\Marcos\Desktop\Cronus Trunk - Rev 3338\Cronus Trunk - Rev 3338\vcproj-9\..\map-server_txt.exe
+       FinalizeBuildStatus:
+         Deleting file "map-server_txt\Debug\map-server_txt.unsuccessfulbuild".
+         Touching "map-server_txt\Debug\map-server_txt.lastbuildstate".
+     1>Done Building Project "C:\Users\Marcos\Desktop\Cronus Trunk - Rev 3338\Cronus Trunk - Rev 3338\vcproj-9\map-server_txt.vcxproj" (build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:08.75

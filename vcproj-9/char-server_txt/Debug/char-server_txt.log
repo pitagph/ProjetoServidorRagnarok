@@ -1,0 +1,98 @@
+﻿Build started 23/04/2012 12:08:00.
+     1>Project "C:\Users\Marcos\Desktop\Cronus Trunk - Rev 3338\Cronus Trunk - Rev 3338\vcproj-9\char-server_txt.vcxproj" on node 4 (build target(s)).
+     1>InitializeBuildStatus:
+         Creating "char-server_txt\Debug\char-server_txt.unsuccessfulbuild" because "AlwaysCreate" was specified.
+       ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /I..\3rdparty\msinttypes\include /I..\3rdparty\mt19937ar /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _WIN32 /D __WIN32 /D _DEBUG /D TXT_ONLY /D _CRT_SECURE_NO_DEPRECATE /D _CRT_NONSTDC_NO_DEPRECATE /D FD_SETSIZE=4096 /D DB_MANUAL_CAST_TO_UNION /D _VC80_UPGRADE=0x0710 /D _MBCS /Gm /RTC1 /MTd /GS /Gy /fp:precise /Zc:wchar_t /Zc:forScope /Fo"char-server_txt\Debug\\" /Fd"char-server_txt\Debug\vc100.pdb" /Gd /TC /wd4800 /analyze- /errorReport:prompt ..\src\char\char.c ..\src\char\int_guild.c ..\src\char\int_homun.c ..\src\char\int_party.c ..\src\char\int_pet.c ..\src\char\int_status.c ..\src\char\int_storage.c ..\src\char\inter.c ..\src\common\core.c ..\src\common\db.c ..\src\common\ers.c ..\src\common\lock.c ..\src\common\malloc.c ..\src\common\mapindex.c ..\src\common\nullpo.c ..\src\common\plugins.c ..\src\common\random.c ..\src\common\showmsg.c ..\src\common\socket.c ..\src\common\strlib.c ..\src\common\timer.c ..\src\common\utils.c ..\3rdparty\mt19937ar\mt19937ar.c
+         mt19937ar.c
+         utils.c
+         timer.c
+         strlib.c
+         socket.c
+         showmsg.c
+         random.c
+         plugins.c
+         nullpo.c
+         mapindex.c
+         malloc.c
+         lock.c
+         ers.c
+         db.c
+         core.c
+         inter.c
+         int_storage.c
+         int_status.c
+         int_pet.c
+         int_party.c
+         Generating Code...
+         Compiling...
+         int_homun.c
+         int_guild.c
+         char.c
+         Generating Code...
+       ManifestResourceCompile:
+         C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\rc.exe /nologo /fo"char-server_txt\Debug\char-server_txt.exe.embed.manifest.res" char-server_txt\Debug\char-server_txt_manifest.rc 
+     1>C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\Microsoft.CppBuild.targets(990,5): warning MSB8012: TargetPath(C:\Users\Marcos\Desktop\Cronus Trunk - Rev 3338\Cronus Trunk - Rev 3338\vcproj-9\..\char-server_txt.exe) does not match the Linker's OutputFile property value (C:\Users\Marcos\Desktop\Cronus Trunk - Rev 3338\Cronus Trunk - Rev 3338\char-server.exe). This may cause your project to build incorrectly. To correct this, please make sure that $(OutDir), $(TargetName) and $(TargetExt) property values match the value specified in %(Link.OutputFile).
+     1>C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\Microsoft.CppBuild.targets(992,5): warning MSB8012: TargetName(char-server_txt) does not match the Linker's OutputFile property value (char-server). This may cause your project to build incorrectly. To correct this, please make sure that $(OutDir), $(TargetName) and $(TargetExt) property values match the value specified in %(Link.OutputFile).
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"..\char-server.exe" /INCREMENTAL /NOLOGO libcmtd.lib oldnames.lib ws2_32.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /NODEFAULTLIB /MANIFEST /ManifestFile:"char-server_txt\Debug\char-server_txt.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"..\char-server.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE:NO /IMPLIB:"..\char-server_txt.lib" /MACHINE:X86 "char-server_txt\Debug\char-server_txt.exe.embed.manifest.res"
+         "char-server_txt\Debug\char.obj"
+         "char-server_txt\Debug\int_guild.obj"
+         "char-server_txt\Debug\int_homun.obj"
+         "char-server_txt\Debug\int_party.obj"
+         "char-server_txt\Debug\int_pet.obj"
+         "char-server_txt\Debug\int_status.obj"
+         "char-server_txt\Debug\int_storage.obj"
+         "char-server_txt\Debug\inter.obj"
+         "char-server_txt\Debug\core.obj"
+         "char-server_txt\Debug\db.obj"
+         "char-server_txt\Debug\ers.obj"
+         "char-server_txt\Debug\lock.obj"
+         "char-server_txt\Debug\malloc.obj"
+         "char-server_txt\Debug\mapindex.obj"
+         "char-server_txt\Debug\nullpo.obj"
+         "char-server_txt\Debug\plugins.obj"
+         "char-server_txt\Debug\random.obj"
+         "char-server_txt\Debug\showmsg.obj"
+         "char-server_txt\Debug\socket.obj"
+         "char-server_txt\Debug\strlib.obj"
+         "char-server_txt\Debug\timer.obj"
+         "char-server_txt\Debug\utils.obj"
+         "char-server_txt\Debug\mt19937ar.obj"
+       Manifest:
+         C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\mt.exe /nologo /verbose /out:"char-server_txt\Debug\char-server_txt.exe.embed.manifest" /manifest "char-server_txt\Debug\char-server_txt.exe.intermediate.manifest"
+         C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\rc.exe /nologo /fo"char-server_txt\Debug\char-server_txt.exe.embed.manifest.res" char-server_txt\Debug\char-server_txt_manifest.rc 
+       LinkEmbedManifest:
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"..\char-server.exe" /INCREMENTAL /NOLOGO libcmtd.lib oldnames.lib ws2_32.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /NODEFAULTLIB /MANIFEST /ManifestFile:"char-server_txt\Debug\char-server_txt.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"..\char-server.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE:NO /IMPLIB:"..\char-server_txt.lib" /MACHINE:X86 "char-server_txt\Debug\char-server_txt.exe.embed.manifest.res"
+         "char-server_txt\Debug\char.obj"
+         "char-server_txt\Debug\int_guild.obj"
+         "char-server_txt\Debug\int_homun.obj"
+         "char-server_txt\Debug\int_party.obj"
+         "char-server_txt\Debug\int_pet.obj"
+         "char-server_txt\Debug\int_status.obj"
+         "char-server_txt\Debug\int_storage.obj"
+         "char-server_txt\Debug\inter.obj"
+         "char-server_txt\Debug\core.obj"
+         "char-server_txt\Debug\db.obj"
+         "char-server_txt\Debug\ers.obj"
+         "char-server_txt\Debug\lock.obj"
+         "char-server_txt\Debug\malloc.obj"
+         "char-server_txt\Debug\mapindex.obj"
+         "char-server_txt\Debug\nullpo.obj"
+         "char-server_txt\Debug\plugins.obj"
+         "char-server_txt\Debug\random.obj"
+         "char-server_txt\Debug\showmsg.obj"
+         "char-server_txt\Debug\socket.obj"
+         "char-server_txt\Debug\strlib.obj"
+         "char-server_txt\Debug\timer.obj"
+         "char-server_txt\Debug\utils.obj"
+         "char-server_txt\Debug\mt19937ar.obj"
+         char-server_txt.vcxproj -> C:\Users\Marcos\Desktop\Cronus Trunk - Rev 3338\Cronus Trunk - Rev 3338\vcproj-9\..\char-server_txt.exe
+       FinalizeBuildStatus:
+         Deleting file "char-server_txt\Debug\char-server_txt.unsuccessfulbuild".
+         Touching "char-server_txt\Debug\char-server_txt.lastbuildstate".
+     1>Done Building Project "C:\Users\Marcos\Desktop\Cronus Trunk - Rev 3338\Cronus Trunk - Rev 3338\vcproj-9\char-server_txt.vcxproj" (build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:06.26

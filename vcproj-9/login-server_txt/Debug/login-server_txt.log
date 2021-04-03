@@ -1,0 +1,84 @@
+﻿Build started 23/04/2012 12:08:00.
+     1>Project "C:\Users\Marcos\Desktop\Cronus Trunk - Rev 3338\Cronus Trunk - Rev 3338\vcproj-9\login-server_txt.vcxproj" on node 5 (build target(s)).
+     1>InitializeBuildStatus:
+         Creating "login-server_txt\Debug\login-server_txt.unsuccessfulbuild" because "AlwaysCreate" was specified.
+       ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /I..\3rdparty\msinttypes\include /I..\3rdparty\mt19937ar /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _WIN32 /D __WIN32 /D _DEBUG /D _CRT_SECURE_NO_DEPRECATE /D _CRT_NONSTDC_NO_DEPRECATE /D FD_SETSIZE=4096 /D DB_MANUAL_CAST_TO_UNION /D WITH_TXT /D _MBCS /Gm /RTC1 /MTd /GS /Gy /fp:precise /Zc:wchar_t /Zc:forScope /Fo"login-server_txt\Debug\\" /Fd"login-server_txt\Debug\vc100.pdb" /Gd /TC /wd4100 /wd4800 /analyze- /errorReport:prompt ..\src\login\account_txt.c ..\src\login\ipban_txt.c ..\src\login\login.c ..\src\login\loginlog_txt.c ..\src\common\core.c ..\src\common\db.c ..\src\common\ers.c ..\src\common\lock.c ..\src\common\malloc.c ..\src\common\md5calc.c ..\src\common\nullpo.c ..\src\common\plugins.c ..\src\common\random.c ..\src\common\showmsg.c ..\src\common\socket.c ..\src\common\strlib.c ..\src\common\timer.c ..\src\common\utils.c ..\3rdparty\mt19937ar\mt19937ar.c
+         mt19937ar.c
+         utils.c
+         timer.c
+         strlib.c
+         socket.c
+         showmsg.c
+         random.c
+         plugins.c
+         nullpo.c
+         md5calc.c
+         malloc.c
+         lock.c
+         ers.c
+         db.c
+         core.c
+         loginlog_txt.c
+         login.c
+         ipban_txt.c
+         account_txt.c
+         Generating Code...
+       ManifestResourceCompile:
+         C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\rc.exe /nologo /fo"login-server_txt\Debug\login-server_txt.exe.embed.manifest.res" login-server_txt\Debug\login-server_txt_manifest.rc 
+     1>C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\Microsoft.CppBuild.targets(990,5): warning MSB8012: TargetPath(C:\Users\Marcos\Desktop\Cronus Trunk - Rev 3338\Cronus Trunk - Rev 3338\vcproj-9\..\login-server_txt.exe) does not match the Linker's OutputFile property value (C:\Users\Marcos\Desktop\Cronus Trunk - Rev 3338\Cronus Trunk - Rev 3338\login-server.exe). This may cause your project to build incorrectly. To correct this, please make sure that $(OutDir), $(TargetName) and $(TargetExt) property values match the value specified in %(Link.OutputFile).
+     1>C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\Microsoft.CppBuild.targets(992,5): warning MSB8012: TargetName(login-server_txt) does not match the Linker's OutputFile property value (login-server). This may cause your project to build incorrectly. To correct this, please make sure that $(OutDir), $(TargetName) and $(TargetExt) property values match the value specified in %(Link.OutputFile).
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"..\login-server.exe" /INCREMENTAL /NOLOGO libcmtd.lib oldnames.lib ws2_32.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /NODEFAULTLIB /MANIFEST /ManifestFile:"login-server_txt\Debug\login-server_txt.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"..\login-server.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE:NO /IMPLIB:"..\login-server_txt.lib" /MACHINE:X86 "login-server_txt\Debug\login-server_txt.exe.embed.manifest.res"
+         "login-server_txt\Debug\account_txt.obj"
+         "login-server_txt\Debug\ipban_txt.obj"
+         "login-server_txt\Debug\login.obj"
+         "login-server_txt\Debug\loginlog_txt.obj"
+         "login-server_txt\Debug\core.obj"
+         "login-server_txt\Debug\db.obj"
+         "login-server_txt\Debug\ers.obj"
+         "login-server_txt\Debug\lock.obj"
+         "login-server_txt\Debug\malloc.obj"
+         "login-server_txt\Debug\md5calc.obj"
+         "login-server_txt\Debug\nullpo.obj"
+         "login-server_txt\Debug\plugins.obj"
+         "login-server_txt\Debug\random.obj"
+         "login-server_txt\Debug\showmsg.obj"
+         "login-server_txt\Debug\socket.obj"
+         "login-server_txt\Debug\strlib.obj"
+         "login-server_txt\Debug\timer.obj"
+         "login-server_txt\Debug\utils.obj"
+         "login-server_txt\Debug\mt19937ar.obj"
+       Manifest:
+         C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\mt.exe /nologo /verbose /out:"login-server_txt\Debug\login-server_txt.exe.embed.manifest" /manifest "login-server_txt\Debug\login-server_txt.exe.intermediate.manifest"
+         C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\rc.exe /nologo /fo"login-server_txt\Debug\login-server_txt.exe.embed.manifest.res" login-server_txt\Debug\login-server_txt_manifest.rc 
+       LinkEmbedManifest:
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"..\login-server.exe" /INCREMENTAL /NOLOGO libcmtd.lib oldnames.lib ws2_32.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /NODEFAULTLIB /MANIFEST /ManifestFile:"login-server_txt\Debug\login-server_txt.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"..\login-server.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE:NO /IMPLIB:"..\login-server_txt.lib" /MACHINE:X86 "login-server_txt\Debug\login-server_txt.exe.embed.manifest.res"
+         "login-server_txt\Debug\account_txt.obj"
+         "login-server_txt\Debug\ipban_txt.obj"
+         "login-server_txt\Debug\login.obj"
+         "login-server_txt\Debug\loginlog_txt.obj"
+         "login-server_txt\Debug\core.obj"
+         "login-server_txt\Debug\db.obj"
+         "login-server_txt\Debug\ers.obj"
+         "login-server_txt\Debug\lock.obj"
+         "login-server_txt\Debug\malloc.obj"
+         "login-server_txt\Debug\md5calc.obj"
+         "login-server_txt\Debug\nullpo.obj"
+         "login-server_txt\Debug\plugins.obj"
+         "login-server_txt\Debug\random.obj"
+         "login-server_txt\Debug\showmsg.obj"
+         "login-server_txt\Debug\socket.obj"
+         "login-server_txt\Debug\strlib.obj"
+         "login-server_txt\Debug\timer.obj"
+         "login-server_txt\Debug\utils.obj"
+         "login-server_txt\Debug\mt19937ar.obj"
+         login-server_txt.vcxproj -> C:\Users\Marcos\Desktop\Cronus Trunk - Rev 3338\Cronus Trunk - Rev 3338\vcproj-9\..\login-server_txt.exe
+       FinalizeBuildStatus:
+         Deleting file "login-server_txt\Debug\login-server_txt.unsuccessfulbuild".
+         Touching "login-server_txt\Debug\login-server_txt.lastbuildstate".
+     1>Done Building Project "C:\Users\Marcos\Desktop\Cronus Trunk - Rev 3338\Cronus Trunk - Rev 3338\vcproj-9\login-server_txt.vcxproj" (build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:05.58

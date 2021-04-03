@@ -1,0 +1,103 @@
+﻿Build started 23/04/2012 12:07:51.
+     1>Project "C:\Users\Marcos\Desktop\Cronus Trunk - Rev 3338\Cronus Trunk - Rev 3338\vcproj-9\txt-converter-char.vcxproj" on node 4 (build target(s)).
+     1>InitializeBuildStatus:
+         Creating "txt-converter-char\Debug\txt-converter-char.unsuccessfulbuild" because "AlwaysCreate" was specified.
+       ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /I..\3rdparty\mysql\include /I..\3rdparty\msinttypes\include /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _WIN32 /D __WIN32 /D _DEBUG /D _CRT_SECURE_NO_DEPRECATE /D _CRT_NONSTDC_NO_DEPRECATE /D FD_SETSIZE=4096 /D DB_MANUAL_CAST_TO_UNION /D MINICORE /D TXT_SQL_CONVERT /D _VC80_UPGRADE=0x0710 /D _MBCS /Gm /RTC1 /MTd /GS /Gy /fp:precise /Zc:wchar_t /Zc:forScope /Fo"txt-converter-char\Debug\\" /Fd"txt-converter-char\Debug\vc100.pdb" /Gd /TC /analyze- /errorReport:prompt ..\src\char\char.c ..\src\char\int_guild.c ..\src\char\int_party.c ..\src\char\int_pet.c ..\src\char\int_storage.c ..\src\char\inter.c ..\src\common\core.c ..\src\common\ers.c ..\src\common\malloc.c ..\src\common\mapindex.c ..\src\common\showmsg.c ..\src\common\sql.c ..\src\common\strlib.c ..\src\common\timer.c ..\src\common\utils.c "..\src\txt-converter\char-converter.c"
+         char-converter.c
+         utils.c
+         timer.c
+         strlib.c
+         sql.c
+         showmsg.c
+         mapindex.c
+         malloc.c
+         ers.c
+         core.c
+         inter.c
+         int_storage.c
+         int_pet.c
+         int_party.c
+         int_guild.c
+         char.c
+         Generating Code...
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /I..\3rdparty\mysql\include /I..\3rdparty\msinttypes\include /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _WIN32 /D __WIN32 /D _DEBUG /D _CRT_SECURE_NO_DEPRECATE /D _CRT_NONSTDC_NO_DEPRECATE /D FD_SETSIZE=4096 /D DB_MANUAL_CAST_TO_UNION /D MINICORE /D TXT_SQL_CONVERT /D _VC80_UPGRADE=0x0710 /D _MBCS /Gm /RTC1 /MTd /GS /Gy /fp:precise /Zc:wchar_t /Zc:forScope /Fo"txt-converter-char\Debug\char_sql.obj" /Fd"txt-converter-char\Debug\vc100.pdb" /Gd /TC /analyze- /errorReport:prompt ..\src\char_sql\char.c
+         char.c
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /I..\3rdparty\mysql\include /I..\3rdparty\msinttypes\include /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _WIN32 /D __WIN32 /D _DEBUG /D _CRT_SECURE_NO_DEPRECATE /D _CRT_NONSTDC_NO_DEPRECATE /D FD_SETSIZE=4096 /D DB_MANUAL_CAST_TO_UNION /D MINICORE /D TXT_SQL_CONVERT /D _VC80_UPGRADE=0x0710 /D _MBCS /Gm /RTC1 /MTd /GS /Gy /fp:precise /Zc:wchar_t /Zc:forScope /Fo"txt-converter-char\Debug\int_guild_sql.obj" /Fd"txt-converter-char\Debug\vc100.pdb" /Gd /TC /analyze- /errorReport:prompt ..\src\char_sql\int_guild.c
+         int_guild.c
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /I..\3rdparty\mysql\include /I..\3rdparty\msinttypes\include /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _WIN32 /D __WIN32 /D _DEBUG /D _CRT_SECURE_NO_DEPRECATE /D _CRT_NONSTDC_NO_DEPRECATE /D FD_SETSIZE=4096 /D DB_MANUAL_CAST_TO_UNION /D MINICORE /D TXT_SQL_CONVERT /D _VC80_UPGRADE=0x0710 /D _MBCS /Gm /RTC1 /MTd /GS /Gy /fp:precise /Zc:wchar_t /Zc:forScope /Fo"txt-converter-char\Debug\int_mercenary_sql.obj" /Fd"txt-converter-char\Debug\vc100.pdb" /Gd /TC /analyze- /errorReport:prompt ..\src\char_sql\int_mercenary.c
+         int_mercenary.c
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /I..\3rdparty\mysql\include /I..\3rdparty\msinttypes\include /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _WIN32 /D __WIN32 /D _DEBUG /D _CRT_SECURE_NO_DEPRECATE /D _CRT_NONSTDC_NO_DEPRECATE /D FD_SETSIZE=4096 /D DB_MANUAL_CAST_TO_UNION /D MINICORE /D TXT_SQL_CONVERT /D _VC80_UPGRADE=0x0710 /D _MBCS /Gm /RTC1 /MTd /GS /Gy /fp:precise /Zc:wchar_t /Zc:forScope /Fo"txt-converter-char\Debug\int_party_sql.obj" /Fd"txt-converter-char\Debug\vc100.pdb" /Gd /TC /analyze- /errorReport:prompt ..\src\char_sql\int_party.c
+         int_party.c
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /I..\3rdparty\mysql\include /I..\3rdparty\msinttypes\include /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _WIN32 /D __WIN32 /D _DEBUG /D _CRT_SECURE_NO_DEPRECATE /D _CRT_NONSTDC_NO_DEPRECATE /D FD_SETSIZE=4096 /D DB_MANUAL_CAST_TO_UNION /D MINICORE /D TXT_SQL_CONVERT /D _VC80_UPGRADE=0x0710 /D _MBCS /Gm /RTC1 /MTd /GS /Gy /fp:precise /Zc:wchar_t /Zc:forScope /Fo"txt-converter-char\Debug\int_pet_sql.obj" /Fd"txt-converter-char\Debug\vc100.pdb" /Gd /TC /analyze- /errorReport:prompt ..\src\char_sql\int_pet.c
+         int_pet.c
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /I..\3rdparty\mysql\include /I..\3rdparty\msinttypes\include /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _WIN32 /D __WIN32 /D _DEBUG /D _CRT_SECURE_NO_DEPRECATE /D _CRT_NONSTDC_NO_DEPRECATE /D FD_SETSIZE=4096 /D DB_MANUAL_CAST_TO_UNION /D MINICORE /D TXT_SQL_CONVERT /D _VC80_UPGRADE=0x0710 /D _MBCS /Gm /RTC1 /MTd /GS /Gy /fp:precise /Zc:wchar_t /Zc:forScope /Fo"txt-converter-char\Debug\int_storage_sql.obj" /Fd"txt-converter-char\Debug\vc100.pdb" /Gd /TC /analyze- /errorReport:prompt ..\src\char_sql\int_storage.c
+         int_storage.c
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /I..\3rdparty\mysql\include /I..\3rdparty\msinttypes\include /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _WIN32 /D __WIN32 /D _DEBUG /D _CRT_SECURE_NO_DEPRECATE /D _CRT_NONSTDC_NO_DEPRECATE /D FD_SETSIZE=4096 /D DB_MANUAL_CAST_TO_UNION /D MINICORE /D TXT_SQL_CONVERT /D _VC80_UPGRADE=0x0710 /D _MBCS /Gm /RTC1 /MTd /GS /Gy /fp:precise /Zc:wchar_t /Zc:forScope /Fo"txt-converter-char\Debug\inter_sql.obj" /Fd"txt-converter-char\Debug\vc100.pdb" /Gd /TC /analyze- /errorReport:prompt ..\src\char_sql\inter.c
+         inter.c
+       ManifestResourceCompile:
+         C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\rc.exe /nologo /fo"txt-converter-char\Debug\txt-converter-char.exe.embed.manifest.res" txt-converter-char\Debug\txt-converter-char_manifest.rc 
+     1>C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\Microsoft.CppBuild.targets(990,5): warning MSB8012: TargetPath(C:\Users\Marcos\Desktop\Cronus Trunk - Rev 3338\Cronus Trunk - Rev 3338\vcproj-9\..\tools\txt-converter-char.exe) does not match the Linker's OutputFile property value (C:\Users\Marcos\Desktop\Cronus Trunk - Rev 3338\Cronus Trunk - Rev 3338\tools\char-converter.exe). This may cause your project to build incorrectly. To correct this, please make sure that $(OutDir), $(TargetName) and $(TargetExt) property values match the value specified in %(Link.OutputFile).
+     1>C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\Microsoft.CppBuild.targets(992,5): warning MSB8012: TargetName(txt-converter-char) does not match the Linker's OutputFile property value (char-converter). This may cause your project to build incorrectly. To correct this, please make sure that $(OutDir), $(TargetName) and $(TargetExt) property values match the value specified in %(Link.OutputFile).
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"..\tools\char-converter.exe" /INCREMENTAL /NOLOGO /LIBPATH:..\3rdparty\mysql\lib libcmtd.lib oldnames.lib ws2_32.lib libmysql.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /NODEFAULTLIB /MANIFEST /ManifestFile:"txt-converter-char\Debug\txt-converter-char.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"..\tools\char-converter.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE:NO /IMPLIB:"..\tools\txt-converter-char.lib" /MACHINE:X86 "txt-converter-char\Debug\txt-converter-char.exe.embed.manifest.res"
+         "txt-converter-char\Debug\char.obj"
+         "txt-converter-char\Debug\int_guild.obj"
+         "txt-converter-char\Debug\int_party.obj"
+         "txt-converter-char\Debug\int_pet.obj"
+         "txt-converter-char\Debug\int_storage.obj"
+         "txt-converter-char\Debug\inter.obj"
+         "txt-converter-char\Debug\core.obj"
+         "txt-converter-char\Debug\ers.obj"
+         "txt-converter-char\Debug\malloc.obj"
+         "txt-converter-char\Debug\mapindex.obj"
+         "txt-converter-char\Debug\showmsg.obj"
+         "txt-converter-char\Debug\sql.obj"
+         "txt-converter-char\Debug\strlib.obj"
+         "txt-converter-char\Debug\timer.obj"
+         "txt-converter-char\Debug\utils.obj"
+         "txt-converter-char\Debug\char-converter.obj"
+         "txt-converter-char\Debug\char_sql.obj"
+         "txt-converter-char\Debug\int_guild_sql.obj"
+         "txt-converter-char\Debug\int_mercenary_sql.obj"
+         "txt-converter-char\Debug\int_party_sql.obj"
+         "txt-converter-char\Debug\int_pet_sql.obj"
+         "txt-converter-char\Debug\int_storage_sql.obj"
+         "txt-converter-char\Debug\inter_sql.obj"
+       Manifest:
+         C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\mt.exe /nologo /verbose /out:"txt-converter-char\Debug\txt-converter-char.exe.embed.manifest" /manifest "txt-converter-char\Debug\txt-converter-char.exe.intermediate.manifest"
+         C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\rc.exe /nologo /fo"txt-converter-char\Debug\txt-converter-char.exe.embed.manifest.res" txt-converter-char\Debug\txt-converter-char_manifest.rc 
+       LinkEmbedManifest:
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"..\tools\char-converter.exe" /INCREMENTAL /NOLOGO /LIBPATH:..\3rdparty\mysql\lib libcmtd.lib oldnames.lib ws2_32.lib libmysql.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /NODEFAULTLIB /MANIFEST /ManifestFile:"txt-converter-char\Debug\txt-converter-char.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"..\tools\char-converter.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE:NO /IMPLIB:"..\tools\txt-converter-char.lib" /MACHINE:X86 "txt-converter-char\Debug\txt-converter-char.exe.embed.manifest.res"
+         "txt-converter-char\Debug\char.obj"
+         "txt-converter-char\Debug\int_guild.obj"
+         "txt-converter-char\Debug\int_party.obj"
+         "txt-converter-char\Debug\int_pet.obj"
+         "txt-converter-char\Debug\int_storage.obj"
+         "txt-converter-char\Debug\inter.obj"
+         "txt-converter-char\Debug\core.obj"
+         "txt-converter-char\Debug\ers.obj"
+         "txt-converter-char\Debug\malloc.obj"
+         "txt-converter-char\Debug\mapindex.obj"
+         "txt-converter-char\Debug\showmsg.obj"
+         "txt-converter-char\Debug\sql.obj"
+         "txt-converter-char\Debug\strlib.obj"
+         "txt-converter-char\Debug\timer.obj"
+         "txt-converter-char\Debug\utils.obj"
+         "txt-converter-char\Debug\char-converter.obj"
+         "txt-converter-char\Debug\char_sql.obj"
+         "txt-converter-char\Debug\int_guild_sql.obj"
+         "txt-converter-char\Debug\int_mercenary_sql.obj"
+         "txt-converter-char\Debug\int_party_sql.obj"
+         "txt-converter-char\Debug\int_pet_sql.obj"
+         "txt-converter-char\Debug\int_storage_sql.obj"
+         "txt-converter-char\Debug\inter_sql.obj"
+         txt-converter-char.vcxproj -> C:\Users\Marcos\Desktop\Cronus Trunk - Rev 3338\Cronus Trunk - Rev 3338\vcproj-9\..\tools\txt-converter-char.exe
+       FinalizeBuildStatus:
+         Deleting file "txt-converter-char\Debug\txt-converter-char.unsuccessfulbuild".
+         Touching "txt-converter-char\Debug\txt-converter-char.lastbuildstate".
+     1>Done Building Project "C:\Users\Marcos\Desktop\Cronus Trunk - Rev 3338\Cronus Trunk - Rev 3338\vcproj-9\txt-converter-char.vcxproj" (build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:07.96

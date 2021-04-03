@@ -1,0 +1,30 @@
+﻿Build started 23/04/2012 12:07:51.
+     1>Project "C:\Users\Marcos\Desktop\Cronus Trunk - Rev 3338\Cronus Trunk - Rev 3338\vcproj-9\plugin-console.vcxproj" on node 3 (build target(s)).
+     1>InitializeBuildStatus:
+         Creating ".\Debug/console\console.unsuccessfulbuild" because "AlwaysCreate" was specified.
+       ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /I../3rdparty/msinttypes/include /ZI /nologo /W3 /WX- /Od /Oy- /D _DEBUG /D WIN32 /D _WINDOWS /D _USRDLL /D _CRT_SECURE_NO_DEPRECATE /D _CRT_NONSTDC_NO_DEPRECATE /D _VC80_UPGRADE=0x0600 /D _WINDLL /D _MBCS /Gm /EHsc /RTC1 /MTd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo".\Debug/console/" /Fd".\Debug/console/vc100.pdb" /Gd /TC /analyze- /errorReport:prompt ..\src\plugins\console.c
+         console.c
+       ManifestResourceCompile:
+         C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\rc.exe /nologo /fo".\Debug/console\console.dll.embed.manifest.res" .\Debug/console\console_manifest.rc 
+     1>C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\Microsoft.CppBuild.targets(990,5): warning MSB8012: TargetPath(C:\Users\Marcos\Desktop\Cronus Trunk - Rev 3338\Cronus Trunk - Rev 3338\vcproj-9\.\Debug/console\console.dll) does not match the Linker's OutputFile property value (C:\Users\Marcos\Desktop\Cronus Trunk - Rev 3338\Cronus Trunk - Rev 3338\plugins\console.dll). This may cause your project to build incorrectly. To correct this, please make sure that $(OutDir), $(TargetName) and $(TargetExt) property values match the value specified in %(Link.OutputFile).
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"../plugins/console.dll" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /DEF:"..\src\plugins\console.def" /MANIFEST /ManifestFile:".\Debug/console\console.dll.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"../plugins/console.pdb" /TLBID:1 /DYNAMICBASE:NO /IMPLIB:".\Debug/console/console.lib" /MACHINE:X86 /DLL .\Debug/console\console.dll.embed.manifest.res
+         .\Debug/console/console.obj
+            Creating library .\Debug/console/console.lib and object .\Debug/console/console.exp
+       Manifest:
+         C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\mt.exe /nologo /verbose /out:".\Debug/console\console.dll.embed.manifest" /manifest .\Debug/console\console.dll.intermediate.manifest
+         C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\rc.exe /nologo /fo".\Debug/console\console.dll.embed.manifest.res" .\Debug/console\console_manifest.rc 
+       LinkEmbedManifest:
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"../plugins/console.dll" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /DEF:"..\src\plugins\console.def" /MANIFEST /ManifestFile:".\Debug/console\console.dll.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"../plugins/console.pdb" /TLBID:1 /DYNAMICBASE:NO /IMPLIB:".\Debug/console/console.lib" /MACHINE:X86 /DLL .\Debug/console\console.dll.embed.manifest.res
+         .\Debug/console/console.obj
+            Creating library .\Debug/console/console.lib and object .\Debug/console/console.exp
+         plugin-console.vcxproj -> C:\Users\Marcos\Desktop\Cronus Trunk - Rev 3338\Cronus Trunk - Rev 3338\vcproj-9\.\Debug/console\console.dll
+       FinalizeBuildStatus:
+         Deleting file ".\Debug/console\console.unsuccessfulbuild".
+         Touching ".\Debug/console\console.lastbuildstate".
+     1>Done Building Project "C:\Users\Marcos\Desktop\Cronus Trunk - Rev 3338\Cronus Trunk - Rev 3338\vcproj-9\plugin-console.vcxproj" (build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:06.20
