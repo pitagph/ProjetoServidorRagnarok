@@ -1,0 +1,462 @@
+// /--------------------------------------------------------------------\
+// |		     _____       ___   _   _____	  		|
+// |		    /  ___|     /   | | | /  _  \ 			|
+// |		    | |        / /| | | | | | | | 			|
+// |		    | |       / / | | | | | | | | 			|
+// |		    | |___   / /  | | | | | |_| | 			|
+// |		    \_____| /_/   |_| |_| \_____/ 			|
+// |									|
+// | ------------------------------------------------------------------ |
+// | -- Script: Gerenciador VIP						|
+// | ------------------------------------------------------------------ |
+// | -- Criado Por: Caio Fajardo					|
+// | ------------------------------------------------------------------ |
+// | -- Versão: 1.0.1							|
+// | ------------------------------------------------------------------ |
+// | -- Descrição:							|
+// |	Função gerenciador de contas vip.				|
+// | ------------------------------------------------------------------ |
+// | -- Alterações:							|
+// |	Execute a linha abaixo em seu banco de dados.			|
+// |	ALTER TABLE `login` ADD (`diasvip` DATETIME);			|
+// | ------------------------------------------------------------------ |
+// | -- Changelog:							|
+// |									|
+// |	1.0.0 - Script Iniciado. [Caio Fajardo]				|
+// |    1.0.1 - Adicionado duplicatas. [Caio Fajardo]			|
+// |									|
+// \--------------------------------------------------------------------/
+
+-	script	fVIP	-1,{
+
+// ----------------------------------------------------------------------
+// - Configurações							-
+// ----------------------------------------------------------------------
+
+	/* Título do Script.
+	 * Este título aparece no topo do diálogo quando um jogador
+	 * iniciar uma conversa com o npc.
+	 */
+	set $nome$, "^CD0000[ Funcionária VIP ]^000000";
+
+	/* Grupo de jogadores vip.
+	 * Padrão: Grupo 1.
+	 */
+	set $nVip, 1;
+
+	/* Grupo de jogadores normais.
+	 * Padrão: Grupo 0.
+	 */
+	set $nPlayer, 0;
+
+	/* Quantidade de dias para uma conta vip.
+	 * Padrão: 3 dias.
+	 */
+	set $diasVip, 30;
+
+	/* Valor em Cashpoints para adiquirir conta vip.
+	 * Padrão: 10.000
+	 */
+	set $pVip, 10000;
+
+	/* Mapa e coordenadas da sala vip
+	 * Mapa Padrão: Prontera
+	 * Coordenada X: 150
+	 * Coordenada Y: 150
+	 */
+	set $mVip$, "quiz_02";
+	set $x, 45;
+	set $y, 373;
+
+	/* Site do servidor.
+	/* Padrão: forum.cronus-emulator.com
+	 */
+	set $site$,"forum.cronus-emulator.com";
+
+// ----------------------------------------------------------------------
+// - NPC								-
+// ----------------------------------------------------------------------
+
+	switch(getgmlevel()) {
+
+		default:
+			mes $nome$;
+			mes "Você não tem permissão para usar este sistema, vá embora.";
+			close;
+
+		case 0:
+			mes $nome$;
+			mes "Bem vindo "+strcharinfo(0)+".";
+			mes "O que deseja?";
+			next;
+			if(select("- Comprar VIP.:- Nada, Obrigado")==1) {
+				if(#CASHPOINTS < $pVip) {
+					mes $nome$;
+					mes "Desculpe-me, mas você não possui ^0000FFCashPoints^000000 suficiente para efetuar esta transação.";
+					close;
+				}
+				mes $nome$;
+				mes "Você tem certeza que deseja efetuar a compra de ^FF0000"+$diasVip+"^000000 dias de conta vip?";
+				next;
+				if(select("Sim:Não")==1) {
+					mes $nome$;
+					mes "Ok, então está feito, seus dias de usuário vip já foram adicionados.";
+					mes "Você precisa reconectar-se a sua conta para que as alterações tenham efeito.";
+					close2;
+					query_sql "UPDATE `login` SET `level` = '"+$nVip+"', `diasvip` = DATE_ADD(NOW(), INTERVAL "+$diasVip+" DAY) WHERE `level` = '"+$nPlayer+"' AND `account_id` = "+getcharid(3);
+					end;
+				}
+				mes $nome$;
+				mes "Tudo bem, volte quando precisar de meus serviços.";
+				close;
+			}
+			mes $nome$;
+			mes "Tudo bem, volte quando precisar de meus serviços.";
+			close;
+
+		case 1:
+			mes $nome$;
+			mes "Bem vindo "+strcharinfo(0)+".";
+			mes "O que deseja?";
+			next;
+			switch(select("- Ir a sala VIP:- Comprar VIP:- Nada, Obrigado")) {
+				case 1:
+					mes $nome$;
+					mes "Muito bem "+strcharinfo(0)+", irei levar você até a sala vip.";
+					close2;
+					warp ""+$mVip$+"", $x, $y;
+					end;
+				case 4:
+					if(#CASHPOINTS < $pVip) {
+						mes $nome$;
+						mes "Desculpe-me, mas você não possui ^0000FFCashPoints^000000 suficiente para efetuar esta transação.";
+						close;
+					}
+					mes $nome$;
+					mes "Você tem certeza que deseja prolongar sua conta vip por mais ^FF0000"+$diasVip+"^000000 dias?";
+					next;
+					if(select("Sim:Não")==1) {
+						mes $nome$;
+						mes "Ok, seus dias como usuário vip foram prolongados.";
+						close2;
+						query_sql "UPDATE `login` SET `level` = '"+$nVip+"', `diasvip` = DATE_ADD(`diasvip`, INTERVAL "+$diasVip+" DAY) WHERE `level` = '"+$nVip+"' AND `account_id` = "+getcharid(3);
+						end;
+					}
+					mes $nome$;
+					mes "Tudo bem, volte quando precisar de meus serviços.";
+					close;
+
+				case 5:
+					mes $nome$;
+					mes "Tudo bem, volte quando precisar de meus serviços.";
+					close;
+			}
+
+		case 99:
+			mes $nome$;
+			mes "Bem vindo "+strcharinfo(0)+"!";
+			mes "O que deseja?";
+			next;
+			switch(select("- Gerenciar contas VIP:- Gerenciar VIP Free:- Sala Vip:- Cancelar")) {
+
+				case 1:
+					mes $nome$;
+					mes "Em que posso ajudar "+strcharinfo(0)+"?";
+					next;
+					switch(select("- Adicionar VIP:- Remover VIP:- Cancelar")) {
+						case 1:
+							mes $nome$;
+							mes "Certo, então me diga o login da conta que deseja adicionar dias vip.";
+							mes "Digite ^FF0000 0 ^000000 para cancelar.";
+							next;
+							input .@login$;
+							set .@cid, 0;
+							set .@clogin$,"";
+							if(.@login$ == "0") {
+								mes $nome$;
+								mes "Tudo bem, volte quando precisar de meus serviços.";
+								close;
+							}
+							query_sql "SELECT `account_id`, `userid` FROM `login` WHERE `userid` = '"+.@login$+"'", .@cid, .@clogin$;
+							if(.@cid[0] == 0) {
+								mes $nome$;
+								mes "Esta conta não existe, tente novamente.";
+								close;
+							}
+							mes $nome$;
+							mes "^FF0000ID: ^000000"+.@cid+"";
+							mes "^FF0000Usuário: ^000000"+.@clogin$+"";
+							next;
+							mes $nome$;
+							mes "Por favor informe quantos dias deseja adicionar a esta conta.";
+							mes "Digite ^FF0000 0 ^000000 para cancelar.";
+							next;
+							input .@add_Dias;
+							if(.@add_Dias == 0) {
+								mes $nome$;
+								mes "Tudo bem, volte quando precisar de meus serviços.";
+								close;
+							}
+							mes $nome$;
+							mes "Muito bem então, você tem certeza que deseja adicionar ^FF0000"+.@add_Dias+"^000000 dia(s) à conta ^FF0000"+.@clogin$+"^000000?";
+							next;
+							if(select("Sim:Não")==2) {
+								mes $nome$;
+								mes "Tudo bem, volte quando precisar de meus serviços.";
+								close;
+							}
+							query_sql "SELECT (`diasvip` IS NULL OR `diasvip` < NOW()) FROM `login` WHERE `account_id` = '"+.@cid+"'", .@vip;
+							if(.@vip) {
+								query_sql "UPDATE `login` SET `level` = '"+$nVip+"', `diasvip` = DATE_ADD(NOW(), INTERVAL "+.@add_Dias+" DAY) WHERE `account_id` = '"+.@cid+"'";
+								mes $nome$;
+								mes "Os dias foram adicionados à conta.";
+								close;
+							}
+							query_sql "UPDATE `login` SET `level` = '"+$nVip+"', `diasvip` = DATE_ADD(`diasvip`, INTERVAL "+.@add_Dias+" DAY) WHERE `account_id` = '"+.@cid+"'";
+							mes $nome$;
+							mes "Os dias de usuário vip desta conta foram prorrogados.";
+							close;
+
+						case 2:
+							mes $nome$;
+							mes "Certo, então me diga o login da conta que deseja remover dias vip.";
+							mes "Para sair digite ^FF0000 0 ^000000";
+							next;
+							input .@login$;
+							set .@cid, 0;
+							set .@clogin$,"";
+							if(.@login$ == "0") {
+								mes $nome$;
+								mes "Tudo bem, volte quando precisar de meus serviços.";
+								close;
+							}
+							query_sql "SELECT `account_id`, `userid` FROM `login` WHERE `userid` = '"+.@login$+"'", .@cid, .@clogin$;
+							if(.@cid[0] == 0) {
+								mes $nome$;
+								mes "Esta conta não existe, tente novamente.";
+								close;
+							}
+							mes $nome$;
+							mes "^FF0000ID: ^000000"+.@cid+"";
+							mes "^FF0000Usuário: ^000000"+.@clogin$+"";
+							next;
+							mes $nome$;
+							mes "Por favor informe quantos dias deseja remover desta conta.";
+							mes "Digite '^FF0000 0 ^000000' para cancelar.";
+							next;
+							input .@remove_Dias;
+							if(.@remove_Dias == 0) {
+								mes $nome$;
+								mes "Tudo bem, volte quando precisar de meus serviços.";
+								close;
+							}
+							mes $nome$;
+							mes "Muito bem então, você tem certeza que deseja remover ^FF0000"+.@remove_Dias+"^000000 dia(s) da conta ^FF0000"+.@clogin$+"^000000?";
+							next;
+							if(select("Sim:Não")==2) {
+								mes $nome$;
+								mes "Tudo bem, volte quando precisar de meus serviços.";
+								close;
+							}
+							query_sql "SELECT (`diasvip` IS NULL OR `diasvip` < NOW()) FROM `login` WHERE `account_id` = '"+.@cid+"'", .@vip;
+							if(.@vip) {
+								query_sql "UPDATE `login` SET `level` = '"+$nPlayer+"', `diasvip` = SUBDATE(`diasvip`, INTERVAL "+.@remove_Dias+" DAY) WHERE `account_id` = '"+.@cid+"'";
+								mes $nome$;
+								mes "Com essa remoção os dias de conta vip deste jogador irão expirar, sendo assim seu nível de grupo foi modificado para ^FF0000 0 ^000000.";
+								next;
+								mes $nome$;
+								mes "Muito bem, da próxima vez que este personagem se concetar a sua conta seus benefícios vip serão removidos.";
+								close;
+							}
+							query_sql "UPDATE `login` SET `diasvip` = SUBDATE(`diasvip`, INTERVAL "+.@remove_Dias+" DAY) WHERE `account_id` = '"+.@cid+"'";
+							mes $nome$;
+							mes "Certo, então foram removidos "+.@remove_Dias+" dia(s) desta conta.";
+							close;
+
+						case 3:
+							mes $nome$;
+							mes "Tudo bem, volte quando precisar de meus serviços.";
+							close;
+					}
+
+				case 2:
+					mes $nome$;
+					mes "Ok "+strcharinfo(0)+", o que você deseja?";
+					next;
+					switch(select("- Ativar VIP Free:- Desativar VIP Free:- Resetar Vip Free:- Cancelar")) {
+						case 1:
+							if($vipFree >= 1) {
+								mes $nome$;
+								mes "Esta função já está ativa.";
+								close;
+							}
+							mes $nome$;
+							mes "Muito bem "+strcharinfo(0)+", ao ativar a função de vip gratuito todas as novas contas do servidor receberão uma certa quantidade de dias para desfrutar e conhecer todas as vatagens de ser um jogador vip.";
+							next;
+							mes $nome$;
+							mes "Por favor informe quantos dias deseja adicionar para novas contas do servidor.";
+							next;
+							input $vipFreeDays;
+							mes $nome$;
+							mes "Certo, você tem certeza que deseja ativar esta função para que seja adicionado ^FF0000"+$vipFreeDays+" dia(s)^000000 de conta vip gratuitamente as novas contas?";
+							next;
+							if(select("Sim:Não")==1) {
+								mes $nome$;
+								mes "Ok, então tudo bem estarei ativando a funcionalidade de vip gratuito para você.";
+								set $vipFree, 1;
+								set $diasVipFree, $vipFreeDays;
+								close;
+							}
+							mes $nome$;
+							mes "Tudo bem, volte quando precisar de meus serviços.";
+							close;
+
+						case 2:
+							if($vipFree < 1) {
+								mes $nome$;
+								mes "Esta função já encontra-se desativada.";
+								close;
+							}
+							mes $nome$;
+							mes "Certo, você deseja mesmo desativar a funcionalidade de VIP gratuito?";
+							next;
+							if(select("Sim:Não")==1) {
+								mes $nome$;
+								mes "Certo, estarei desativando a função para você então.";
+								set $vipFree, 0;
+								close;
+							}
+							mes $nome$;
+							mes "Tudo bem, volte quando precisar de meus serviços.";
+							close;
+
+						case 3:
+							mes $nome$;
+							mes "Lembre-se que ao resetar a função vip free todas as contas que receberam dias vip gratuitos irão receber novamente.";
+							next;
+							mes $nome$;
+							mes "Tem certeza que deseja prosseguir com esta ação?";
+							next;
+							if(select("Sim:Não")==1) {
+								mes $nome$;
+								mes "Ok, então estarei resetando a função vip free para você.";
+								query_sql "DELETE FROM `acc_reg_num_db` WHERE `key` = '#vipFreeActive'";
+								close;
+							}
+							mes $nome$;
+							mes "Tudo bem, volte quando precisar de meus serviços.";
+							close;
+
+						case 4:
+							mes $nome$;
+							mes "Tudo bem, volte quando precisar de meus serviços.";
+							close;
+					}
+
+				case 3:
+					mes $nome$;
+					mes "Muito bem "+strcharinfo(0)+", irei levar você até a sala vip.";
+					close2;
+					warp ""+$mVip$+"", $x, $y;
+					end;
+
+				case 4:
+					mes $nome$;
+					mes "Tudo bem, volte quando precisar de meus serviços.";
+					close;
+			}
+	}
+
+	OnInit:
+		waitingroom "Funcionária VIP",0;	
+		end;
+}
+
+// ----------------------------------------------------------------------
+// - Gerente								-
+// ----------------------------------------------------------------------
+-	script	SistemaVip#GERENCIADOR	-1,{
+
+/* Função de Proteção
+ * Verifica todo dia às 00:01 se os jogadores estão
+ * com os dias de conta vip expirados e seta seu grupo como 0 novamente.
+ */
+OnClock0001:
+	query_sql "UPDATE `login` SET `level` = '"+$nPlayer+"' WHERE `level` = '"+$nVip+"' AND (`diasvip` IS NULL OR `diasvip` < NOW())";
+	end;
+
+/* Função de verificação ao logar.
+ * Verifica se o usuário é vip e se está com os dias de conta vip vencido.
+ */
+OnPCLoginEvent:
+	query_sql "SELECT (`diasvip` IS NULL OR `diasvip` < NOW()) FROM `login` WHERE `account_id` = "+getcharid(3), $diasVip;
+	query_sql "SELECT (`diasvip` IS NULL OR `diasvip` < NOW()) FROM `login` WHERE `level` = '"+$nVip+"' AND `account_id` = "+getcharid(3), .@removeVip;
+
+	dispbottom "[ Funcionária VIP ]";
+	dispbottom "Você possui "+#CASHPOINTS+" CashPoints em sua conta.";
+		if(.@removeVip) {
+		query_sql "UPDATE `login` SET `level` = '"+$nPlayer+"', `diasvip` = 'NULL' WHERE `level` = '"+$nVip+"' AND (`diasvip` IS NULL OR `diasvip` < NOW())";
+		dispbottom "Seus dias de usuário vip esgotaram, obrigado por colaborar com o servidor.";
+		message strcharinfo(0),"Você será desconectado dentro de 10 segundos para que sua conta vip seja desativada.";
+		sleep2 10000;
+		atcommand "@kick "+getcharid(0);
+		end;
+	}
+	if($diasVip) {
+		if($vipFree >= 1 && #vipFreeActive <= 0) {
+			set #vipFreeActive, 1;
+			query_sql "UPDATE `login` SET `level` = '"+$nVip$+"', `diasvip` = DATE_ADD(NOW(), INTERVAL "+$diasVipFree+" DAY) WHERE `level` = '"+$nPlayer+"' AND `account_id` = "+getcharid(3);
+			dispbottom "Foram adicionados "+$diasVipFree+" dia(s) de conta vip gratuitamente para você.";
+			message strcharinfo(0),"Você será desconectado dentro de 10 segundos para que sua conta vip seja ativada.";
+			sleep2 10000;
+			atcommand "@kick "+getcharid(0);
+			end;
+		}
+		dispbottom "Você ainda não é um usuário vip? Acesse www.ragnahour.com agora mesmo e saiba como tornar-se um.";
+		end;
+	}
+	query_sql "SELECT DATE_FORMAT(`diasvip`, '%d/%M/%Y às %T') FROM `login` WHERE `account_id` = "+getcharid(3), .@dia$;
+	dispbottom "Sua conta vip será válida até o dia "+.@dia$+".";
+	end;
+}
+
+// ----------------------------------------------------------------------
+// - Duplicações							-
+// ----------------------------------------------------------------------
+
+prontera,150,192,6	duplicate(fVIP)	Funcionária Vip#PRONT	700
+morocc,162,97,6	duplicate(fVIP)	Funcionária Vip#MOROCC	700
+geffen,122,62,6	duplicate(fVIP)	Funcionária Vip#GEF	700
+payon,168,232,6	duplicate(fVIP)	Funcionária Vip#PAY	700
+alberta,186,148,6	duplicate(fVIP)	Funcionária Vip#ALB	700
+izlude,132,121,6	duplicate(fVIP)	Funcionária Vip#IZL	700
+aldebaran,147,117,6	duplicate(fVIP)	Funcionária Vip#ALD	700
+xmas,141,138,6	duplicate(fVIP)	Funcionária Vip#XMAS	700
+comodo,190,152,6	duplicate(fVIP)	Funcionária Vip#COM	700
+yuno,151,46,6	duplicate(fVIP)	Funcionária Vip#YUNO	700
+amatsu,194,84,6	duplicate(fVIP)	Funcionária Vip#AMA	700
+gonryun,165,122,6	duplicate(fVIP)	Funcionária Vip#GON	700
+umbala,85,162,6	duplicate(fVIP)	Funcionária Vip#UMB	700
+louyang,230,100,6	duplicate(fVIP)	Funcionária Vip#LOU	700
+jawaii,248,141,6	duplicate(fVIP)	Funcionária Vip#JAW	700
+ayothaya,146,123,6	duplicate(fVIP)	Funcionária Vip#AYO	700
+einbroch,61,205,6	duplicate(fVIP)	Funcionária Vip#EIN	700
+lighthalzen,156,102,6	duplicate(fVIP)	Funcionária Vip#LHZ	700
+hugel,99,152,6	duplicate(fVIP)	Funcionária Vip#HUG	700
+rachel,130,118,6	duplicate(fVIP)	Funcionária Vip#RAC	700
+veins,221,125,6	duplicate(fVIP)	Funcionária Vip#VEINS	700
+moscovia,226,191,6	duplicate(fVIP)	Funcionária Vip#MOSC	700
+manuk,277,146,6	duplicate(fVIP)	Funcionária Vip#MAN	700
+brasilis,197,221,6	duplicate(fVIP)	Funcionária Vip#BRA	700
+
+// ----------------------------------------------------------------------
+// - Mapflags								-
+// ----------------------------------------------------------------------
+
+quiz_02	mapflag	nobranch
+quiz_02	mapflag	nowarp
+quiz_02	mapflag	nowarpto
+quiz_02	mapflag	nomemo
+quiz_02	mapflag	nosave
+quiz_02	mapflag	noreturn
+quiz_02	mapflag	noteleport

@@ -13,3 +13,54 @@
 //==================================================================
 //2338,Wedding_Dress,Wedding Dress,5,43000,,500,,0,,0,0xFFFFFFFE,7,0,16,,0,1,0,{},{ setoption Option_Wedding,1; },{ setoption Option_Wedding,0; }
 //7170,Tuxedo,Tuxedo,5,43000,,10,,0,,0,0xFFFFFFFE,7,1,16,,0,1,0,{},{ setoption Option_Wedding,1; },{ setoption Option_Wedding,0; }
+//=================================================================
+// Custons MaxWell Não Remova os Creditos
+// 
+// Boa Sorte =)
+//
+//
+//=================================================================
+// -- Helmos
+20000,Helmo_Sky,Helmo Sky,5,100,50,50,,3,,1,0x00004000,7,2,256,,10,1,741,{bonus2 bSkillAtk,100,250; bonus2 bSkillAtk,80,251; bonus2 bSkillAtk,80,254; bonus2 bSkillAtk,40,480; },{},{}
+20001,Observation_Wings,Observation Wings,5,100,50,50,,2,,1,0x00000800,7,2,1,,10,1,742,{bonus2 bSubRace,7,20; bonus bAllStats,10; bonus bMDef2,5; bonus bMaxHPRate,17; bonus bAtkRate,15; if(isequipped(1740)) bonus2 bAddRace,7,30; },{},{}
+20002,Modern_Glasses,Modern Glasses,5,100,50,50,,2,,1,0xFFFFFFF,7,2,512,,10,1,743,{bonus bStr,10; bonus bMDef2,13; bonus bMaxHPRate,10; bonus bMaxSPRate,10; },{},{}
+20003,Pandaears,Panda ears,5,100,50,50,,2,,1,0x00000001,7,2,256,,10,1,744,{bonus bAtkRate,20; bonus bAllStats,20; bonus bMaxHP,75000; bonus bMaxSP,4000; skill 364,10; bonus bUnstripableHelm,0; },{},{}
+20004,Royalty_Romantic_Leaf,Royalty Romantic Leaf,5,100,50,10,,2,,1,0xFFFFFFF,7,2,1,,10,1,745,{ bonus bAllStats,7; bonus2 bSubRace,7,15; bonus bAtkRate,15; bonus bMDef2,5; },{},{}
+20005,Black_Mask,Black Mask,5,100,50,10,,2,,1,0x00001000,7,2,1,,10,1,746,{bonus bAllStats,10; bonus bMDef2,10; bonus2 bSubRace,7,25; bonus bAtkRate,20; bonus bDelayRate,-10; bonus2 bSkillAtk,50,364; bonus2 bResEff,Eff_Freeze,3000; },{},{}
+20006,Royalty_Wings_Of_Victory,Royalty Wings Of Victory,5,100,50,10,,3,,1,0x00000080,7,2,256,,10,1,747,{bonus bStr,30; bonus bAgi,10; bonus bMDef2,10; bonus2 bSubRace,7,20; bonus2 bMagicAddRace,7,15; bonus bMaxHPRate,20; bonus bMaxSPRate,10; bonus2 bSkillAtk,25,59; bonus2 bSkillAtk,45,56; },{},{}
+20007,Sage_Ring,Sage Ring,5,100,50,10,,3,,1,0x00010000,7,2,1,,10,1,748,{bonus bAllStats,10; bonus2 bAddRace,7,10; bonus bMaxHPRate,5; bonus bMatkRate,15; if(isequipped(20022)) bonus bInt,13; },{},{}
+20008,Dark_Helmet_Of_Orc_Hero,Dark Helmet Of Orc Hero,5,100,50,10,,3,,1,0x00008000,7,2,768,,10,1,749,{bonus bAllStats,20; bonus bMDef2,20; bonus2 bSubRace,7,20; bonus bMaxHPRate,20; bonus bMaxSPRate,20; bonus2 bSkillAtk,20,371; bonus2 bSkillAtk,15,372; if(isequipped(1822)) {bonus2 bSkillAtk,10,263; bonus2 bSkillAtk,10,272; bonus2 bSkillAtk,15,273; bonus bStr,10; bonus bUnbreakableHelm,0; } },{},{}
+20009,Magic_Trick,Magic Trick,5,100,50,10,,3,,1,0x00000001,7,2,512,,10,1,750,{ bonus bInt,10; bonus bMaxHPRate,5; bonus bMaxSPRate,5; skill 482,5; },{},{}
+20010,Black_Magic_Eyes,Black Magic Eyes,5,100,50,10,,3,,1,0x00000200,7,2,256,,10,1,751,{bonus bAllStats,20; bonus2 bSubRace,7,20; bonus bMaxHPRate,20; bonus bMaxSPRate,15; bonus bDelayRate,-10; },{},{}
+20011,Bope_Cap,Bope Cap,5,100,50,10,,3,,1,0x01000000,7,2,256,,10,1,752,{bonus bDex,10; bonus bluk,10; bonus bStr,10; bonus bMDef2,10; bonus2 bAddRace,7,10; bonus2 bSubRace,7,30; },{},{}
+20012,Helmo_Negro,Helmo Negro,5,100,50,10,,3,,1,0xFFFFFFF,7,2,768,,10,1,753,{bonus2 bSubRace,7,20; bonus bMaxHPRate,20; bonus bMaxSPRate,20; bonus bAllStats,20; skill 4,5; },{},{}
+20013,Majestic_Fox_Hat,Majestic Fox Hat,5,100,50,10,,3,,1,0x00080000,7,2,256,,10,1,754,{bonus bDex,30; bonus bluk,5; bonus bVit,5; bonus bMDef2,5; bonus2 bSubRace,7,15; bonus bMaxHPRate,15; bonus bMaxSPRate,15; bonus2 bSkillAtk,50,316; if(BaseClass == Job_Bard) skill 326,5; if(BaseClass == Job_Dancer) skill 318,5;},{},{}
+20014,Twin_Bunnies,Twin Bunnies,5,100,50,10,,3,,1,0xFFFFFFF,7,2,512,,10,1,755,{bonus bMaxHP,8; bonus bMaxSP,8; bonus bMDef2,7; bonus bDex,5; bonus bAgi,5; },{},{}
+20015,Black_Ribbon,Black Ribbon,5,100,50,10,,3,,1,0xFFFFFFF,7,2,768,,10,1,756,{bonus bAllStats,20; bonus bMaxHPRate,20; bonus bMaxSPRate,20; bonus2 bSubRace,7,20; skill 260,2; },{},{}
+20016,Orelhas_De_Chii,Orelhas De Chii,5,100,50,10,,3,,1,0xFFFFFFF,7,2,512,,10,1,757,{ bonus bInt,8; bonus bMDef2,10; bonus bMaxHPRate,12; bonus bMaxSPRate,12; },{},{}
+20017,Black_Jester_Hat,Black Jester Hat,5,100,50,10,,3,,1,0x00020000,7,2,256,,10,1,758,{bonus bDex,30; bonus bAgi,10; bonus bVit,10; bonus bMDef2,15; bonus2 bSubRace,7,20; bonus2 bAddRace,7,15; bonus bMaxHPRate,17; bonus bMaxSPRate,17; },{},{}
+20018,Red_Bunny_Hat,Red Bunny Hat,5,100,50,10,,3,,1,0x00040000,7,2,256,,10,1,759,{bonus bStr,15; bonus bInt,15; bonus bVit,10; bonus2 bSubRace,7,15; bonus bMaxHPRate,15; bonus bMaxSPRate,15; bonus2 bSkillAtk,15,42; },{},{}
+20019,Fox_Ears,Fox Ears,5,100,50,10,,3,,1,0x02000000,7,2,256,,10,1,760,{bonus bStr,20; bonus bInt,20; bonus bMDef2,10; bonus2 bSubRace,7,15; bonus2 bAddRace,7,20; bonus bMaxHPRate,15; bonus bMaxHPRate,20; bonus bMaxHP,35000; if(isequipped(13302)) bonus2 bSubRace,7,30; bonus bUseSPrate,-30; },{},{}
+20020,Zodiac_Belt,Zodiac Belt,5,100,50,10,,3,,1,0x00000100,7,2,1,,10,1,761,{bonus bStr,10; bonus bMDef2,10; bonus bMatkRate,15; bonus2 bSkillHeal,15,28; bonus2 bSkillHeal,100,70; if(isequipped(20022)) bonus bInt,13; },{},{}
+20021,Black_Pirate_Hat,Black Pirate Hat,5,100,50,10,,3,,1,0x00000400,7,2,256,,10,1,762,{ bonus bStr,20; bonus bDex,20; bonus bMDef2,10; bonus bBaseAtk,100; bonus2 bSubRace,7,20; bonus bLongAtkDef,15; skill 337,10; },{},{}
+20022,Traveler_Hat,Traveler Hat,5,100,50,10,,3,,1,0x00010300,7,2,768,,10,1,763,{bonus bAllStats,20; bonus bMaxHPRate,20; bonus bMaxSPRate,15; bonus bDelayRate,-10; skill 364,3; },{},{}
+20023,Traker,Traker,5,100,50,10,,3,,1,0xA0800,7,2,512,,10,1,764,{bonus bMaxHPRate,10; bonus bDex,10; bonus bMDef2,10; bonus2 bSkillAtk,15,46; },{},{}
+20024,Goldeling_Hat,Goldeling Hat,5,100,50,10,,3,,1,0x00600000,7,2,256,,10,1,765,{bonus bStr,22; bonus bDex,18; bonus bMDef2,10; bonus bMaxHPRate,20; bonus bMaxSPRate,10; bonus bMaxHP,20000; skill 4,3; },{},{}
+20025,Arc_Angeling_Hat,Arc Angeling Hat,5,100,50,10,,3,,1,0x00800000,7,2,256,,10,1,766,{ bonus bStr,20; bonus bInt,20; bonus2 bAddRace,7,15; bonus2 bSubRace,7,10; bonus bMaxHPRate,20; bonus bMaxSPRate,15; bonus bMaxHP,30000; skill 48,10; bonus2 bResEff,Eff_Stone,3000; },{},{}
+20026,Dowry,Dowry,5,100,50,10,,3,,1,0xFFFFFFF,7,2,256,,10,1,767,{bonus bDex,20; bonus bVit,10; bonus bMDef2,10; bonus2 bAddRace,7,12; bonus2 bSubRace,7,12; },{},{}
+20027,Cartola_Branca,Cartola Branca,5,100,50,10,,3,,1,0xFFFFFFF,7,2,256,,10,1,768,{ bonus bDex,5; bonus bInt,25; bonus bMaxHP,10; bonus2 bSubRace,7,10; },{},{}
+20028,Royalty_Blue_Flower,Royalty Blue Flower,5,100,50,10,,3,,1,0x00000200,7,2,1,,10,1,769,{bonus bAllStats,10; bonus bMDef2,15; bonus bMatkRate,25; bonus2 bMagicAddRace,7,30;  if(isequipped(20022)) bonus bInt,13; },{},{}
+20029,Royalty_Romantic_Flower,Royalty Romantic Flower,5,100,50,10,,3,,1,0xFFFFFFF,7,2,1,,10,1,770,{bonus bAllStats,7; bonus2 bSubRace,7,15; bonus bMatkRate,15; bonus bMDef2,5; },{},{}
+20030,Dark_Moon,Dark_Moon,3,1,1,1,,,,,0x00000000,0,2,0,,,1,773,{},{},{}
+20032,The_Clown_Nose,The_Clown_Nose,4,100,50,2,,3,,1,0x00080000,7,2,1,,10,1,771,{bonus bAllStats,10; bonus2 bAddRace,7,15; bonus2 bSubRace,7,20;  if (getiteminfo(getequipid(EQI_HAND_R),11) == 11) bonus2 bSubRace,7,30; bonus2 bResEff,Eff_Freeze,3000; },{},{}
+20033,Red_Leaf,Red Leaf,4,100,50,2,,3,,1,1024,7,2,1,,10,1,772,{bonus bAllStats,10; bonus2 bSubRace,7,15; bonus2 bAddRace,7,15; bonus2 bSkillAtk,15,485; bonus bAspd,10; bonus bMDef2,10; },{},{}
+// -- By Huaren
+20034,pingu cap,pingu_cap,4,100,50,2,,3,,1,268435455,7,2,768,,10,1,773,{bonus bAllStats,20; bonus bMaxHPRate,10; bonus bMaxSPRate,10; bonus2 bSubRace,7,15; bonus2 bAddRace,7,15; },{},{}
+20035,yoyo hat,yoyo_hat,4,100,50,2,,3,,1,0xFFFFFFF,7,2,1,,10,1,774,{bonus bAllStats,7; bonus bMaxHPRate,10; bonus bMaxSPRate,10; bonus2 bSubRace,7,10; bonus2 bAddRace,7,10; },{},{}
+20036,valk helm,valk_helm,4,100,50,2,,3,,1,0xFFFFFFF,7,2,256,,10,1,775,{bonus bAllStats,7; bonus bMaxHPRate,10; bonus bMaxSPRate,10; bonus2 bSubRace,7,10; bonus2 bAddRace,7,10; },{},{}
+20037,coroa lunar,coroa_lunar,4,100,50,2,,3,,1,0xFFFFFFF,7,2,768,,10,1,776,{bonus bAllStats,20; bonus bMaxHPRate,10; bonus bMaxSPRate,10; bonus2 bSubRace,7,15; bonus2 bAddRace,7,15; },{},{}
+20038,ghostring hat,ghostring_hat,4,100,50,2,,3,,1,0xFFFFFFF,7,2,256,,10,1,777,{bonus bAllStats,10; bonus bMaxHPRate,10; bonus bMaxSPRate,10; bonus2 bSubRace,7,15; bonus2 bAddRace,7,15; bonus2 bMagicAddEle,0,40; },{},{}
+20039,moonlight hat,moonlight_hat,4,100,50,2,,3,,1,0xFFFFFFF,7,2,256,,10,1,268,{bonus bSpeedRate,25; bonus bAllStats,10; bonus bMaxHPRate,10; bonus bMaxSPRate,10; bonus2 bSubRace,7,15; bonus2 bAddRace,7,15; },{},{}
+20040,coroa solar,coroa_solar,4,100,50,2,,3,,1,268435455,7,2,768,,10,1,138,{bonus bAllStats,20; bonus bMaxHPRate,10; bonus bMaxSPRate,10; bonus2 bSubRace,7,15; bonus2 bAddRace,7,15; },{},{}
+// -- Armas
+1740,Royalty_Rudra_Bow,Royalty Rudra Bow,4,100,50,120,150,3,9,4,2048,7,2,34,4,10,1,,{ bonus2 bResEff,Eff_Stone,5000; bonus2 bResEff,Eff_Freeze,5000; bonus2 bResEff,Eff_Stun,5000; bonus2 bResEff,Eff_Poison,5000; bonus2 bResEff,Eff_Silence,5000; bonus2 bResEff,Eff_Blind,5000;bonus2 bResEff,Eff_Curse,5000; skill 84,5; bonus bInt,5; },{},{}
